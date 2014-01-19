@@ -5,10 +5,10 @@ class Integer
     chara0 = ["","","二","三","四","五","六","七","八","九"]
     chara1 = ["","一","二","三","四","五","六","七","八","九"]
     chara2 = ["","十","百","千"]
-    chara3 = ["","万","億","兆","京","垓","𥝱","穣","溝","澗","正","載","極","恒河沙","阿僧祇","那由他","不可思議","無量大数"]
+    chara3 = ["","万","億","兆","京","垓","𥝱","穣","溝","澗","正","載","極","恒河沙","阿僧祇","那由他","不可思議"]
     if self == 0
       out_put = "零"
-    elsif self.to_s.length > 128
+    elsif self.to_s.length > 68
       out_put = "無量大数"
     else
       num1 = self.to_s.reverse.scan(/.{4}|.+\Z/)
@@ -28,7 +28,7 @@ class Integer
           end
         end
       end
-      out_put.reverse!
+    out_put.reverse!
     end
   end
 end
