@@ -12,7 +12,6 @@ class String
         self.sub!(i,'\&,')
       end
       num1 = self.split(",")
-      #["二百二十一兆", "千億", "十一"]
       num2 = []
       num1.each do |num|
         chara3.each do |i|
@@ -20,7 +19,6 @@ class String
         end
         num2 << num.split(",")
       end
-      #[["二百二十一","兆"],["千","億"],["十一"]]
       num2.each do |num|
         ac_num = 0
         chara3_num = 1
@@ -31,7 +29,6 @@ class String
           num[0].sub!(i,'\&,')
         end
         num3 = num[0].split(",")
-        #["二百,二十,一"]
         num3.each do |n|
           unless n[1] == nil
             ac_num += (chara1.find_index(n[0]) + 1) * (10 ** (chara2.find_index(n[1]) + 1))
@@ -49,6 +46,3 @@ class String
     out_put
   end
 end
-
-p "零".to_suuji
-p "一億二百十万六千三百二十一".to_suuji
