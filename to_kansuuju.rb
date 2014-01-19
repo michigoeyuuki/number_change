@@ -8,6 +8,8 @@ class Integer
     chara3 = ["","万","億","兆","京","垓","𥝱","穣","溝","澗","正","載","極","恒河沙","阿僧祇","那由他","不可思議","無量大数"]
     if self == 0
       out_put = "零"
+    elsif self.to_s.length > 128
+      out_put = "無量大数"
     else
       num1 = self.to_s.reverse.scan(/.{4}|.+\Z/)
       num1.each_with_index do |n, i|
@@ -26,8 +28,7 @@ class Integer
           end
         end
       end
+      out_put.reverse!
     end
-    out_put.reverse!
   end
 end
-

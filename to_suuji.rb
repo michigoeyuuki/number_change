@@ -7,6 +7,8 @@ class String
     chara3 = ["万","億","兆","京","垓","𥝱","穣","溝","澗","正","載","極","恒河沙","阿僧祇","那由他","不可思議","無量大数"]
     if self == "零"
       out_put = 0
+    elsif self == "無量大数"
+      out_put = "∞"
     else
       chara3.each do |i|
         self.sub!(i,'\&,')
